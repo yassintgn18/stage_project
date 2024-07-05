@@ -13,18 +13,18 @@ if (!$con) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	$prenom = $_POST["prenom"];
-	$email = $_POST["email"];
-	$phone = $_POST["phone"];
-	$message = $_POST["message"];
-	$nom = $_POST["nom"];
+	$prenom =  $_POST["prenom"];
+	$email =  $_POST["email"];
+	$phone =  $_POST["phone"];
+	$message =  $_POST["message"];
+	$nom =  $_POST["nom"];
 
 	$stmt = $con->prepare("INSERT INTO formulaire (nom, prenom, email, telephone, message) VALUES (?, ?, ?, ?, ?)");
 	$stmt->bind_param("sssss", $nom, $prenom, $email, $phone, $message);
 
 	if ($stmt->execute()) {
 		echo "Formulaire envoyé avec succès";
-		header("Location: 24_contacts.html");
+		header("Location: Contact.html");
          exit();
 
 	} else {
