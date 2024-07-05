@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 	if ($stmt->execute()) {
 		echo "Formulaire envoyé avec succès";
-		header("Location: 24_contacts.html");
+		header("Location: Contact.html");
          exit();
 
 	} else {
