@@ -849,7 +849,7 @@
 									<textarea class="input--grey" name="message" placeholder="Votre Message ici" rows="3" required></textarea>
 								</div>
 								<div class="inquiry-btn-wrap">
-									<button class="crumina-button button--green button--l">Envoyer</button>
+									<button class="crumina-button button--green button--l" name="form">Envoyer</button>
 									<span>Veuillez nous indiquer les points particuliers à vérifier et le meilleur moment pour vous contacter par téléphone (si fourni).</span>
 								</div>
 							</div>
@@ -916,10 +916,10 @@
 					<p class="subscribe-subtitle text-white">
 						<span class="font-weight-bold">
 							Souhaitez-vous nous présenter un projet ?</span></p>
-					<form class="subscribe-form">
+					<form class="subscribe-form" action="db_page.php" method="POST">
 						<div class="input-btn--inline">
-							<input class="input--white" type="email" placeholder="Votre adresse email">
-							<button type="button" class="crumina-button button--dark button--l">Envoyer</button>
+							<input class="input--white" type="email" placeholder="Votre adresse email" name="sub_email">
+							<button name="sub" type="submit" class="crumina-button button--dark button--l">Envoyer</button>
 						</div>
 					</form>
 				</div>
